@@ -3,7 +3,7 @@ import { transactionContext } from './../Context/TransactionCP';
 
 const AddTransaction = () => {
     const [text, setText] = useState('');
-    const [amount, setAmount] = useState(0);
+    const [amount, setAmount] = useState('');
     const {addTransaction} = useContext(transactionContext);
    
     function sendTransData(e) {
@@ -46,6 +46,7 @@ const AddTransaction = () => {
             name="amount"
             value={amount}
             onChange={(e)=> setAmount(e.target.value)}
+            placeholder="0"
           />
         </div>
         <button type="submit" className="sub-btn">Add Transaction</button>
